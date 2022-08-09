@@ -1,24 +1,37 @@
-# README
+## Blog app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A blog app build with RoR
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+To get a local copy on this project on your machine follow these steps
+- Open your terminal
+- Clone this repo "git clone https://github.com/rega1237/blog-app"
+- Open the project with you favorite code editor
+- Enjoy!
 
-* System dependencies
+## Authors
+👤 **Rafael Guzman**
 
-* Configuration
+- GitHub: [@githubhandle](https://github.com/rega1237/) 
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/rafael-eduardo-guzman/)
 
-* Database creation
+## 🤝 Contributing
 
-* Database initialization
+Contributions, issues, and feature requests are welcome!
 
-* How to run the test suite
+Feel free to check the [issues page](../../issues/).
 
-* Services (job queues, cache servers, search engines, etc.)
+## Show your support
 
-* Deployment instructions
+Give a ⭐️ if you like this project!
 
-* ...
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
