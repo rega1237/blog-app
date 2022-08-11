@@ -11,4 +11,6 @@ class Comment < ApplicationRecord
       post.update(comments_counter: post.comments_counter + 1)
     end
   end
+
+  private :update_comments_counter
 end

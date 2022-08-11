@@ -11,4 +11,6 @@ class Like < ApplicationRecord
       post.update(likes_counter: post.likes_counter + 1)
     end
   end
+
+  private :update_likes_counter
 end
