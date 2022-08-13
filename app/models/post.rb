@@ -3,14 +3,13 @@ class Post < ApplicationRecord
   has_many :likes, class_name: 'Like', foreign_key: 'post_id'
   has_many :comments
 
+  validates :title, presence: true
+  validates :title, length: { maximum: 250 }
+
   after_save :update_post_counter
 
   def update_post_counter
-    if author.posts_counter.nil?
-      author.update(posts_counter: 1)
-    else
-      author.update(posts_counter: author.posts_counter + 1)
-    end
+    author.update(posts_counter: author.posts.count)
   end
 
   def most_recent_comments

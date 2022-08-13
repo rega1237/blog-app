@@ -5,11 +5,7 @@ class Comment < ApplicationRecord
   after_save :update_comments_counter
 
   def update_comments_counter
-    if post.comments_counter.nil?
-      post.update(comments_counter: 1)
-    else
-      post.update(comments_counter: post.comments_counter + 1)
-    end
+    post.update(comments_counter: post.comments.count)
   end
 
   private :update_comments_counter
