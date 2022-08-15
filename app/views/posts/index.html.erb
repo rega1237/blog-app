@@ -1,0 +1,9 @@
+<h1>Here will display all posts per user</h1>
+
+<%if @posts.length > 1 %>
+  <% @posts.each do |post| %>
+    <h3><%= post.title %></h3>
+  <% end %>
+<%else%>
+  <%= @posts[0].title %>
+<% end %>
