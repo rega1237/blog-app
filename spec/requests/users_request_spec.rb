@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Users", type: :request do
+RSpec.describe 'Users', type: :request do
   describe 'GET users page #index' do
     before(:each) do
       get '/users'
@@ -11,7 +11,7 @@ RSpec.describe "Users", type: :request do
     end
 
     it 'renders the correct template' do
-      expect(response).to render_template("index")
+      expect(response).to render_template('index')
     end
 
     it 'renders and get the placeholder text' do
@@ -29,7 +29,7 @@ RSpec.describe "Users", type: :request do
     end
 
     it 'renders the correct template' do
-      expect(response).to render_template("show")
+      expect(response).to render_template('show')
     end
 
     it 'renders and get the placeholder text' do
