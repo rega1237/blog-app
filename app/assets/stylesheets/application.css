@@ -58,6 +58,11 @@
   padding-top: 20px;
 }
 
+.user-post > a {
+  text-decoration: none;
+  color: black;
+}
+
 .user-post > h4 {
   padding-bottom: 10px;
 }
@@ -69,7 +74,9 @@
   padding: 20px 0;
 }
 
-.button-container > button {
+.see-posts {
+  text-decoration: none;
+  color: black;
   padding: 10px;
   border: 1px solid black;
 }
