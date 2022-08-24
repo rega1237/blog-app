@@ -87,4 +87,4 @@ end
 Capybara.configure do |config|
   config.run_server = false
 end
-session = Capybara::Session.new(:selenium)
+# Capybara::Session.new(:selenium)
