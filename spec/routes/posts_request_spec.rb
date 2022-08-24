@@ -28,7 +28,7 @@ RSpec.describe 'Users', type: :request do
       expect(response).to have_http_status(:ok)
     end
 
-     it 'renders and get the placeholder text' do
+    it 'renders and get the placeholder text' do
       get "/users/#{@user.id}/posts/#{@post.id}"
       expect(response.body).to include 'Rafael'
     end

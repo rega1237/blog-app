@@ -2,17 +2,17 @@ require 'rails_helper'
 
 RSpec.describe Post, type: :model do
   before do
-  @user = User.new(name: 'John Doe', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Canada.')
-  @post = Post.new(author: @user, title: 'title', text: 'text')
-  Comment.create(author: @user, post: @post, text: 'text1')
-  Comment.create(author: @user, post: @post, text: 'text2')
-  Comment.create(author: @user, post: @post, text: 'text3')
-  Comment.create(author: @user, post: @post, text: 'text4')
-  Comment.create(author: @user, post: @post, text: 'text5')
-  Comment.create(author: @user, post: @post, text: 'text6')
+    @user = User.new(name: 'John Doe', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Canada.')
+    @post = Post.new(author: @user, title: 'title', text: 'text')
+    Comment.create(author: @user, post: @post, text: 'text1')
+    Comment.create(author: @user, post: @post, text: 'text2')
+    Comment.create(author: @user, post: @post, text: 'text3')
+    Comment.create(author: @user, post: @post, text: 'text4')
+    Comment.create(author: @user, post: @post, text: 'text5')
+    Comment.create(author: @user, post: @post, text: 'text6')
 
-  @user.save
-  @post.save
+    @user.save
+    @post.save
   end
 
   context 'When testing the Posts class' do
@@ -28,9 +28,7 @@ RSpec.describe Post, type: :model do
       expect(@post.text).to eq('text')
     end
   end
-  # rubocop:disable Lint/UselessAssignment
   context 'When testing the Posts methods' do
-    # rubocop:enable Lint/UselessAssignment
     it 'should return the lenght of comments in comments_counter' do
       expect(@post.most_recent_comments.length).to eq(5)
     end
