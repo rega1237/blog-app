@@ -15,25 +15,28 @@ RSpec.describe 'Users', type: :request do
     end
 
     it 'renders and get the placeholder text' do
-      expect(response.body).to include 'Here'
+      expect(response.body).to include 'Create new post'
     end
   end
 
   describe 'GET user page #show' do
-    before(:each) do
-      get '/users/20'
+    before(:all) do
+      @user = User.create(name: 'Rafael', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'My bio')
     end
 
     it 'is a success' do
+      get "/users/#{@user.id}"
       expect(response).to have_http_status(:ok)
     end
 
     it 'renders the correct template' do
+      get "/users/#{@user.id}"
       expect(response).to render_template('show')
     end
 
     it 'renders and get the placeholder text' do
-      expect(response.body).to include 'Here'
+      get "/users/#{@user.id}"
+      expect(response.body).to include 'Rafael'
     end
   end
 end
