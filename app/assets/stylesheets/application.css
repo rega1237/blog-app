@@ -162,3 +162,24 @@
   text-align: center;
   margin: 0 auto;
 }
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.login-links {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.input-form {
+  width: 200px;
+  padding: 5px;
+}
