@@ -7,6 +7,9 @@
   <%@comments.each do |comment|%>
     <div class="comments-post">
       <%=comment.author.name%>: <%= comment.text %></p>
+      <% if can? :destroy, comment %>
+       <%= button_to 'Delete Comment', user_post_comment_path(comment.author.id, @post.id, comment.id), method: :delete %>
+      <% end %>
     </div>
   <%end%>
   <div class="button-container-flex">
@@ -17,6 +20,9 @@
     <%=form_with url: user_post_likes_path(@post.author, @post) do |form|%>
       <%= form.submit "❤️ Like", class: "like-btn" %>
     <%end%>
+    <% if can? :destroy, @post %>
+      <%= button_to 'Delete Post', post_path(@post.id), method: :delete, class: "like-btn" %>
+    <% end %>
   </div>
 </div>
 

@@ -5,10 +5,10 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-=begin
-first_user = User.create(name: 'Rafael', photo: 'https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80', bio: 'Teacher from Mexico.')
-second_user = User.create(name: 'Olga', photo: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80', bio: 'Virtual Assistant.')
-third_user = User.create(name: 'Marco', photo: 'https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80', bio: 'Software Developer.')
+
+first_user = User.create(name: 'Rafael', photo: 'https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80', bio: 'Teacher from Mexico.', email: 'rafael@gmail.com', password: '$2a$12$GqgQ3ZRTvDqEZWr.H39SyOyIT7Esv6V/qicNAtgBddtYFD.usu7Aa', role: 'admin')
+second_user = User.create(name: 'Olga', photo: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80', bio: 'Virtual Assistant.', email: 'olga@gmail.com', password: '$2a$12$LYEqY1OY1TrPmJRNyae4EukbF31RnTmqyg/x0kg5ylE.EdSOF2waS')
+third_user = User.create(name: 'Marco', photo: 'https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80', bio: 'Software Developer.', email: 'marco@gmail.com', password: '$2a$12$1yWM27M6OhnCmCtVq6nNCOOuj/n8DGqee4VqnQmaJ2b51BFrU52OG')
 
 first_post = Post.create(author: first_user, title: 'My first Post', text: 'RoR rocks')
 second_post = Post.create(author: second_user, title: 'This is a post', text: 'Awesome content should display here')
@@ -43,4 +43,3 @@ Comment.create(post: third_post, author: second_user, text: 'Hi Rafael!')
 Comment.create(post: third_post, author: first_user, text: 'Awesome Post!')
 Comment.create(post: third_post, author: first_user, text: 'Hi Rafael!')
 Comment.create(post: third_post, author: second_user, text: 'Awesome Post!')
-=end

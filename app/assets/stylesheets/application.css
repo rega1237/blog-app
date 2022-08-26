@@ -116,11 +116,11 @@
   color: black;
   border: solid black 1px;
   padding: 10px;
-  margin-right: 10px;
 }
 
 .like-btn {
   padding: 10px;
+  margin-left: 10px;
 }
 
 .form {
